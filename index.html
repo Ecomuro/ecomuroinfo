@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ecomuro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Paleta ===== */
+    :root{
+      --verde1:#7A9F60;
+      --verde2:#688D56;
+      --verde3:#607E53;
+      --verde4:#607154;
+      --cafe:#715634;
+      --beige:#FEE0D5;
+      --panel:#B28A68;
+      --blanco:#ffffff;
+    }
+
+    /* ===== Base ===== */
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--blanco); color:var(--cafe);
+      font-family:'Dancing Script', cursive;
+      overflow-x:hidden;
+      scroll-snap-type:y proximity;
+    }
+    section{
+      min-height:100vh; display:grid; place-items:center;
+      position:relative; padding:120px 20px 80px;
+      scroll-snap-align:start;
+    }
+
+    /* ===== Link fijo: Nosotros ===== */
+    .nav-fixed{
+      position:fixed; top:12px; right:16px; z-index:9999;
+      font-size:20px; text-decoration:none; color:var(--cafe);
+      background:rgba(255,255,255,.9); border:1px solid #e5e5e5;
+      padding:.5rem .9rem; border-radius:12px;
+      backdrop-filter:saturate(120%) blur(4px);
+      font-family:'Shrikhand', cursive;
+    }
+    .nav-fixed:hover{ color:var(--verde2); }
+
+    /* ===== Sección 1 (Portada) ===== */
+    .contenido-hero{
+      z-index:1; text-align:center;
+      display:flex; flex-direction:column; align-items:center; gap:18px;
+    }
+    .titulo{
+      font-family:'Shrikhand', cursive;
+      font-size: clamp(72px, 12vw, 140px);
+      line-height:1; margin:8px 0 6px; 
+      color:var(--cafe);
+      text-shadow: 8px 8px 0 var(--beige);
+      position: relative;
+      left: 20px; /* mueve el título un poco a la derecha */
+    }
+    .subtitulo{
+      font-size: clamp(26px, 4vw, 42px);
+      color:var(--verde3);
+    }
+    .plantica{
+      display:block;
+      margin:0 auto 20px auto;
+      width:min(60vw, 420px); /* mucho más grande */
+      height:auto;
+      max-width:480px;
+      position:relative; /* ya no flotando abajo */
+    }
+
+    /* ===== Sección 2 ===== */
+    .panel{
+      z-index:1;
+      width:min(100%, 1000px);
+      background:var(--panel);
+      border-radius:30px;
+      padding:40px;
+      box-shadow:0 14px 50px rgba(0,0,0,.18);
+      color:#fff;
+    }
+    .panel h2{
+      margin:0 0 18px; display:flex; align-items:center; gap:16px;
+      font-family:'Shrikhand', cursive; font-size:56px;
+      color:var(--cafe);
+      text-shadow:4px 4px 0 var(--beige);
+    }
+    .badge{
+      width:68px; height:68px; border-radius:50%; background:var(--verde2);
+      box-shadow:0 0 0 6px var(--beige), 0 6px 20px rgba(0,0,0,.2);
+      flex:0 0 68px;
+    }
+    .panel p{
+      margin:12px 0 0; font-size:clamp(22px, 2.6vw, 28px); line-height:1.8;
+      color:#FDF9F6;
+    }
+
+    /* ===== Sección 3 (Módulos) ===== */
+    .cards{
+      z-index:1;
+      width:min(1200px, 95vw);
+      display:grid; grid-template-columns:repeat(3,1fr); gap:36px;
+    }
+    .card{
+      background:#eaeaea; border-radius:24px; padding:24px 24px 32px;
+      position:relative; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,.15);
+      min-height: 480px;
+    }
+    .card--v1{ background:#BFD7B0; }
+    .card--v2{ background:#F0D8C6; }
+    .card--v3{ background:#6C8F63; }
+    .foto-circulo{
+      position:absolute; left:50%; top:-40px; transform:translateX(-50%);
+      width:200px; height:200px; border-radius:50%; overflow:hidden;
+      border:8px solid var(--blanco); box-shadow:0 10px 28px rgba(0,0,0,.25);
+      background:#fff;
+    }
+    .foto-circulo img{ width:100%; height:100%; object-fit:cover; }
+    .card h3{
+      margin:180px 0 16px; text-align:center; font-size:34px; color:var(--cafe);
+      font-family:'Shrikhand', cursive; text-shadow:3px 3px 0 var(--beige);
+    }
+    .card p{
+      margin:0; text-align:center; font-size:22px; line-height:1.7;
+      padding:0 12px;
+    }
+    .card--v3 p{ color:#fff; }
+
+    .cta{
+      margin-top:40px; text-align:center; color:var(--cafe);
+      font-size:24px;
+    }
+    .cta a{
+      color:var(--verde2); text-decoration:none; font-weight:600;
+      border-bottom:2px solid transparent;
+    }
+    .cta a:hover{ border-color:var(--verde2); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 980px){
+      .cards{ grid-template-columns:1fr; gap:24px; }
+      .card{ min-height: auto; }
+      .card h3{ margin-top:220px; }
+      .plantica{ width:min(70vw, 360px); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="nav-fixed" href="nosotros.html" title="Ir a Nosotros">Nosotros</a>
+
+  <!-- SECCIÓN 1 -->
+  <section class="hero">
+    <img class="plantica" src="plantaa.png" alt="Logo/plantica de Ecomuro">
+    <div class="contenido-hero">
+      <h1 class="titulo">Ecomuro</h1>
+      <p class="subtitulo">Respira mejor, vive mejor</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2 -->
+  <section class="section2">
+    <div class="panel">
+      <h2><span class="badge"></span> Ecomuro</h2>
+      <p>
+        ¿Sientes que a tu espacio le falta vida? Nuestros muros ecológicos no son solo decoración:
+        purifican el aire, refrescan el ambiente y elevan el bienestar sin ocupar espacio útil.
+        En <strong>Ecomuro</strong> desarrollamos jardines verticales con <strong>sistema de riego automatizado</strong>,
+        pensados para facilitarte la vida. Integran naturaleza, diseño y sostenibilidad en hogares,
+        oficinas y negocios. Fabricados con materiales reciclados y resistentes para acompañarte por años.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3 -->
+  <section class="section3">
+    <div class="cards">
+      <article class="card card--v1">
+        <div class="foto-circulo">
+          <img src="pequeñoo.png" alt="Módulo pequeño">
+        </div>
+        <h3>Módulo Pequeño</h3>
+        <p>
+          Ideal para escritorios, rincones de oficina y espacios muy reducidos.
+          Perfecto para plantas compactas y de raíces cortas.
+          <br><em>Ejemplos:</em> suculentas mini, cactus enanos, fitonias.
+        </p>
+      </article>
+
+      <article class="card card--v2">
+        <div class="foto-circulo">
+          <img src="mediano.png" alt="Módulo mediano">
+        </div>
+        <h3>Módulo Mediano</h3>
+        <p>
+          Para paredes de cuarto u oficina que buscan un punto focal natural.
+                   <br><em>Ejemplos:</em> potus, helecho nido de ave, peperomias.
+        </p>
+      </article>
+
+      <article class="card card--v3">
+        <div class="foto-circulo">
+          <img src="grandee.png" alt="Módulo grande">
+        </div>
+        <h3>Módulo Grande</h3>
+        <p>
+          Protagonista para muros amplios, recepciones e instituciones.
+                    <br><em>Ejemplos:</em> drácena, filodendro, lirio de la paz.
+        </p>
+      </article>
+    </div>
+
+    <div class="cta">
+      ¿Quieres ver más? Contáctanos por
+      <a href="https://www.instagram.com/ecom.uro?utm_source=qr&igsh=MXF1bGhkM3VhOWVqcQ" target="_blank" rel="noopener">Instagram</a>.
+      <br>También puedes encontrar nuestros Ecomuros en puntos físicos de <strong>Homecenter</strong>.
+       <br>También puedes escribirnos a nuestro correo electrónico: ecomuro.info@gmail.com
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecomuro</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Dancing+Script:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --verde1: #7A9F60;
+      --verde2: #688D56;
+      --verde3: #607E53;
+      --verde4: #607154;
+      --cafe:   #715634;
+      --beige:  #FEE0D5;
+      --panel:  #B28A68;
+      --blanco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Great Vibes', cursive; 
+      background-color: var(--blanco);
+      color: var(--verde4);
+      font-size: 1.5rem; /* Aumentado para textos blancos */
+      line-height: 1.8;
+    }
+
+    h1.title {
+      font-family: 'Shrikhand', cursive;
+      color: var(--cafe);
+      font-size: 4.5rem; /* +10 puntos */
+    }
+
+    h2.subtitle, h3.subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem; /* +3 puntos */
+      color: black; 
+    }
+
+    .section {
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+      border-radius: 15px;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero img {
+      max-width: 250px; 
+    }
+
+    .hero .subtitle {
+      font-size: 2.5rem; /* Frase “Respira verde, vive mejor” agrandada */
+    }
+
+    /* Logo fijo arriba a la izquierda */
+    .logo-fixed {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      width: 103px; /* +3 puntos */
+      z-index: 1000;
+    }
+
+    .history {
+      background-color: var(--panel);
+      color: var(--blanco);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: 1.5rem; /* Texto blanco más grande */
+    }
+
+    .cards {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1 1 45%;
+      padding: 1.5rem;
+      border-radius: 15px;
+      color: var(--blanco);
+      font-size: 1.5rem; /* Texto blanco más grande */
+    }
+
+    .mision {
+      background-color: var(--verde1);
+    }
+
+    .vision {
+      background-color: var(--verde3);
+    }
+
+    .card h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.3rem; /* +3 puntos */
+      margin-bottom: 1rem;
+      color: black;
+    }
+
+    .values {
+      background-color: var(--cafe);
+      color: var(--blanco);
+      font-size: 1.5rem; /* Texto blanco más grande */
+    }
+
+    .values h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.8rem; /* +3 puntos */
+      color: black;
+    }
+
+    .values ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .values li {
+      margin-bottom: 1.5rem;
+    }
+
+    .values li strong {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.1rem; /* +3 puntos */
+      display: block;
+      margin-bottom: 0.3rem;
+      color: black;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--verde2);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+      font-size: 1.5rem; /* Texto blanco más grande */
+    }
+
+    footer a {
+      color: var(--blanco);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo fijo -->
+  <img src="LOGO.png" alt="Logo pequeño" class="logo-fixed">
+
+  <!-- Sección principal -->
+  <section class="section hero">
+    <img src="plantaa.png" alt="Logo Ecomuro">
+    <h2 class="subtitle">Nosotros</h2>
+    <h1 class="title">Ecomuro</h1>
+    <p class="subtitle">Respira verde, vive mejor</p>
+  </section>
+
+  <!-- Nuestra historia -->
+  <section class="section history">
+    <div>
+      <h2 class="subtitle">Nuestra historia</h2>
+      <p>
+        Ecomuro surge de la unión entre la pasión por la naturaleza y la necesidad de mejorar la calidad de vida en los entornos urbanos. La idea nació cuando una de las fundadoras, con gran afinidad hacia el cuidado de las plantas, y su compañera, quien ha enfrentado problemas respiratorios, identificaron la oportunidad de crear una solución que combinara diseño, salud y sostenibilidad.
+      </p>
+      <p>
+        A partir de esta motivación, se desarrolló el concepto de un muro vertical con sistema de riego aéreo automatizado. Este diseño busca optimizar el uso del espacio, mejorar la calidad del aire en interiores y exteriores, y aportar una alternativa innovadora frente a los retos ambientales actuales.
+      </p>
+      <p>
+        Hoy, Ecomuro representa un proyecto que integra tecnología y naturaleza para ofrecer espacios más saludables, sostenibles y estéticamente agradables. Nuestro propósito es contribuir al bienestar de las personas y al mismo tiempo fomentar prácticas responsables con el medioambiente.
+      </p>
+    </div>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section class="section">
+    <div class="cards">
+      <div class="card mision">
+        <h3 class="subtitle">Misión</h3>
+        <p>
+          Diseñar, construir y mantener muros ecológicos auto sostenibles, innovadores y accesibles, utilizando técnicas y materiales reciclados para maximizar los beneficios ambientales, sociales y económicos, educar a la comunidad sobre la importancia de las infraestructuras verdes.
+        </p>
+      </div>
+      <div class="card vision">
+        <h3 class="subtitle">Visión</h3>
+        <p>
+          Convertir cada espacio urbano en un oasis de biodiversidad y sostenibilidad, transformando muros grises en vibrantes ecosistemas que embellecen el entorno, que purifiquen el aire y que promuevan la conexión con la naturaleza.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestros valores -->
+  <section class="section values">
+    <h2 class="subtitle">Nuestros valores</h2>
+    <ul>
+      <li>
+        <strong>Sostenibilidad</strong>
+        Promovemos prácticas responsables que contribuyen al cuidado del medioambiente, optimizando recursos y reduciendo el impacto ambiental.
+      </li>
+      <li>
+        <strong>Innovación</strong>
+        Apostamos por soluciones creativas y tecnológicas que transformen los espacios en ambientes más saludables y modernos.
+      </li>
+      <li>
+        <strong>Bienestar</strong>
+        Trabajamos para mejorar la calidad de vida de las personas, ofreciendo productos que impactan positivamente en la salud y el entorno.
+      </li>
+      <li>
+        <strong>Compromiso</strong>
+        Nos dedicamos a cumplir con nuestros clientes y con la sociedad, asegurando calidad, eficiencia y responsabilidad en cada proyecto.
+      </li>
+      <li>
+        <strong>Trabajo en equipo</strong>
+        Creemos en la colaboración, la unión de ideas y talentos como base para el crecimiento y la excelencia.
+      </li>
+      <li>
+        <strong>Estética y funcionalidad</strong>
+        Diseñamos soluciones que combinan belleza natural con practicidad, creando espacios agradables y sostenibles.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contacto -->
+  <footer>
+    <div class="contacto">
+      ¿Quieres ver más? Contáctanos por
+      <a href="https://www.instagram.com/ecom.uro?utm_source=qr&igsh=MXF1bGhkM3VhOWVqcQ" target="_blank" rel="noopener">Instagram</a>.
+      <br>También puedes encontrar nuestros Ecomuros en puntos físicos de <strong>Homecenter</strong>.
+      <br>También puedes escribirnos a nuestro correo electrónico:
+      <a href="mailto:ecomuro.info@gmail.com">ecomuro.info@gmail.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
